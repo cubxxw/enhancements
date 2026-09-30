@@ -1,0 +1,367 @@
+# Instincts generated from https://github.com/cubxxw/enhancements
+# Generated: 2026-06-02T00:14:33.510Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: enhancements-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Commit Length
+
+## Action
+
+Keep commit messages concise (~49 characters)
+
+## Evidence
+
+- Average commit message length: 49 chars
+- Based on 16 commits
+
+---
+id: enhancements-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Naming Files
+
+## Action
+
+Use PascalCase naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: PascalCase
+
+---
+id: enhancements-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: enhancements-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: enhancements-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: enhancements-workflow-kep-proposal-workflow
+trigger: "when doing kep proposal workflow"
+confidence: 0.55
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Workflow Kep Proposal Workflow
+
+## Action
+
+Follow the kep-proposal-workflow workflow:
+1. Create a new directory under keps/sig-api-machinery/<kep-number>-<feature-name>/
+2. Add README.md and kep.yaml to the new directory
+3. Add related analysis/BEFORE/AFTER documentation if needed
+4. Add a corresponding prod-readiness YAML under keps/prod-readiness/sig-api-machinery/
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~1x per month
+- Files: keps/sig-api-machinery/*/README.md, keps/sig-api-machinery/*/kep.yaml, keps/sig-api-machinery/*/AFTER.md
+
+---
+id: enhancements-workflow-kep-feedback-and-iteration-workflow
+trigger: "when doing kep feedback and iteration workflow"
+confidence: 0.7
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/cubxxw/enhancements
+---
+
+# Enhancements Workflow Kep Feedback And Iteration Workflow
+
+## Action
+
+Follow the kep-feedback-and-iteration-workflow workflow:
+1. Edit README.md in the relevant KEP directory
+2. Optionally update kep.yaml and/or prod-readiness YAML
+3. Commit with a message referencing feedback or comments
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~4x per month
+- Files: keps/sig-api-machinery/*/README.md, keps/sig-api-machinery/*/kep.yaml, keps/prod-readiness/sig-api-machinery/*.yaml
+
+---
+id: enhancements-coding-file-naming
+trigger: "When creating or renaming a file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding File Naming
+
+## Action
+
+Use PascalCase for file names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.files
+
+---
+id: enhancements-coding-function-naming
+trigger: "When defining a function"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding Function Naming
+
+## Action
+
+Use camelCase for function names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.functions
+
+---
+id: enhancements-coding-class-naming
+trigger: "When defining a class"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding Class Naming
+
+## Action
+
+Use PascalCase for class names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.classes
+
+---
+id: enhancements-coding-constant-naming
+trigger: "When defining a constant"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding Constant Naming
+
+## Action
+
+Use SCREAMING_SNAKE_CASE for constant names
+
+## Evidence
+
+- Pattern in codeStyle.namingConventions.constants
+
+---
+id: enhancements-coding-import-style
+trigger: "When importing modules"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding Import Style
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Pattern in codeStyle.importStyle
+
+---
+id: enhancements-coding-export-style
+trigger: "When exporting modules or symbols"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Coding Export Style
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Pattern in codeStyle.exportStyle
+
+---
+id: enhancements-testing-location
+trigger: "When adding or updating tests"
+confidence: 0.7
+domain: testing
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Testing Location
+
+## Action
+
+Place test files in a separate directory from source code
+
+## Evidence
+
+- Pattern in architecture.folderStructure.testLocation
+
+---
+id: enhancements-git-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Git Commit Format Freeform
+
+## Action
+
+Use a concise, freeform message without a required prefix
+
+## Evidence
+
+- Pattern in commits.type: freeform
+- Examples: 'initial proposal', 'Simplify KEP', 'Apply feedback'
+
+---
+id: enhancements-git-commit-length
+trigger: "When composing a commit message"
+confidence: 0.7
+domain: git
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Git Commit Length
+
+## Action
+
+Keep commit messages brief (average ~49 characters)
+
+## Evidence
+
+- Pattern in commits.averageLength
+
+---
+id: enhancements-workflow-kep-proposal
+trigger: "When someone wants to propose a new KEP"
+confidence: 0.95
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Workflow Kep Proposal
+
+## Action
+
+Create a new directory under keps/sig-api-machinery/<kep-number>-<feature-name>/, add README.md and kep.yaml, add BEFORE/AFTER/ANALYSIS docs if needed, and add a prod-readiness YAML under keps/prod-readiness/sig-api-machinery/
+
+## Evidence
+
+- Defined in workflows.kep-proposal-workflow
+- Example commit sequence: 'Create a new directory...', 'Add README.md and kep.yaml...'
+
+---
+id: enhancements-workflow-kep-feedback
+trigger: "When someone wants to revise a KEP based on feedback or new requirements"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: cubxxw/enhancements
+---
+
+# Enhancements Workflow Kep Feedback
+
+## Action
+
+Edit README.md in the relevant KEP directory, optionally update kep.yaml and/or prod-readiness YAML, and commit with a message referencing feedback or comments
+
+## Evidence
+
+- Defined in workflows.kep-feedback-and-iteration-workflow
+- Example commit sequence: 'Edit README.md...', 'Optionally update kep.yaml...'
+
